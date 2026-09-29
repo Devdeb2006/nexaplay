@@ -5,7 +5,18 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['"Bebas Neue"', 'ui-sans-serif', 'sans-serif'],
+      },
+      colors: {
+        brand: {
+          amber: '#E3A23F',
+          navy: '#151827',
+        },
+      },
+    },
   },
   plugins: [],
 }

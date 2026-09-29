@@ -1,0 +1,130 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "John Wick: Chapter 3 – Parabellum",
+      "shortTitle": "John Wick",
+      "tagline": "Chapter 3 – Parabellum (2019)",
+      "overview": "John Wick: Chapter 3 – Parabellum is a 2019 American action thriller film directed by Chad Stahelski, in which excommunicated hitman John Wick fights his way across New York with a $14 million bounty on his head.",
+      "releaseDate": "2019-05-17",
+      "genres": ["Action", "Thriller"],
+      "rating": 7.4,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/9/94/John_Wick_Chapter_3_Parabellum.png",
+      "backdrop": "https://upload.wikimedia.org/wikipedia/en/9/94/John_Wick_Chapter_3_Parabellum.png"
+    },
+    {
+      "id": 2,
+      "title": "The Dark Knight",
+      "shortTitle": "The Dark Knight",
+      "tagline": "Why So Serious? (2008)",
+      "overview": "The Dark Knight is a 2008 superhero film directed by Christopher Nolan, in which Batman, Lieutenant Gordon, and DA Harvey Dent set out to dismantle organized crime in Gotham, only to be confronted by the Joker.",
+      "releaseDate": "2008-07-18",
+      "genres": ["Action", "Crime", "Drama"],
+      "rating": 9.0,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg",
+      "backdrop": "https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Inception",
+      "shortTitle": "Inception",
+      "tagline": "Your Mind Is the Scene of the Crime (2010)",
+      "overview": "Inception is a 2010 science fiction heist film written and directed by Christopher Nolan, following a thief who steals secrets through dream-sharing technology and is offered a chance to have his criminal history erased.",
+      "releaseDate": "2010-07-16",
+      "genres": ["Sci-Fi", "Thriller"],
+      "rating": 8.8,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg",
+      "backdrop": "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Mad Max: Fury Road",
+      "shortTitle": "Mad Max",
+      "tagline": "What a Lovely Day (2015)",
+      "overview": "Mad Max: Fury Road is a 2015 post-apocalyptic action film directed by George Miller, in which Max teams up with Furiosa to flee a tyrannical warlord across the desert wasteland.",
+      "releaseDate": "2015-05-15",
+      "genres": ["Action", "Adventure"],
+      "rating": 8.1,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/6/6e/Mad_Max_Fury_Road.jpg",
+      "backdrop": "https://upload.wikimedia.org/wikipedia/en/6/6e/Mad_Max_Fury_Road.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Mission: Impossible – Fallout",
+      "shortTitle": "M:I Fallout",
+      "tagline": "Chapter 6 (2018)",
+      "overview": "Mission: Impossible – Fallout is a 2018 action spy film written and directed by Christopher McQuarrie, in which Ethan Hunt and his IMF team race to stop a plutonium heist from ending in global catastrophe.",
+      "releaseDate": "2018-07-27",
+      "genres": ["Action", "Thriller"],
+      "rating": 7.7,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/f/ff/MI_%E2%80%93_Fallout.jpg",
+      "backdrop": "https://upload.wikimedia.org/wikipedia/en/f/ff/MI_%E2%80%93_Fallout.jpg"
+    },
+    {
+      "id": 6,
+      "title": "No Time to Die",
+      "shortTitle": "No Time to Die",
+      "tagline": "The 25th Bond Film (2021)",
+      "overview": "No Time to Die is a 2021 spy thriller film and the twenty-fifth entry in the James Bond series, in which a retired James Bond is pulled back into action to rescue a kidnapped scientist.",
+      "releaseDate": "2021-09-30",
+      "genres": ["Action", "Thriller"],
+      "rating": 7.3,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/f/fe/No_Time_to_Die_poster.jpg",
+      "backdrop": "https://upload.wikimedia.org/wikipedia/en/f/fe/No_Time_to_Die_poster.jpg"
+    },
+    {
+      "id": 7,
+      "title": "The Matrix",
+      "shortTitle": "The Matrix",
+      "tagline": "Welcome to the Real World (1999)",
+      "overview": "The Matrix is a 1999 science fiction action film written and directed by the Wachowskis, in which a hacker discovers that reality as he knows it is a simulation controlling humanity.",
+      "releaseDate": "1999-03-31",
+      "genres": ["Sci-Fi", "Action"],
+      "rating": 8.7,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/d/db/The_Matrix.png",
+      "backdrop": "https://upload.wikimedia.org/wikipedia/en/d/db/The_Matrix.png"
+    },
+    {
+      "id": 8,
+      "title": "Blade Runner 2049",
+      "shortTitle": "Blade Runner",
+      "tagline": "The Truth Leads to Chaos (2017)",
+      "overview": "Blade Runner 2049 is a 2017 science fiction film directed by Denis Villeneuve, in which a young blade runner unearths a secret that leads him to track down former blade runner Rick Deckard.",
+      "releaseDate": "2017-10-06",
+      "genres": ["Sci-Fi", "Drama"],
+      "rating": 8.0,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/9/9b/Blade_Runner_2049_poster.png",
+      "backdrop": "https://upload.wikimedia.org/wikipedia/en/9/9b/Blade_Runner_2049_poster.png"
+    },
+    {
+      "id": 9,
+      "title": "Dune",
+      "shortTitle": "Dune",
+      "tagline": "Part One (2021)",
+      "overview": "Dune is a 2021 epic space opera film directed by Denis Villeneuve, following Paul Atreides as his family accepts stewardship of the dangerous desert planet Arrakis.",
+      "releaseDate": "2021-10-22",
+      "genres": ["Sci-Fi", "Adventure"],
+      "rating": 8.0,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/8/8e/Dune_%282021_film%29.jpg",
+      "backdrop": "https://upload.wikimedia.org/wikipedia/en/8/8e/Dune_%282021_film%29.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Extraction",
+      "shortTitle": "Extraction",
+      "tagline": "One Way In. No Way Out. (2020)",
+      "overview": "Extraction is a 2020 action thriller film directed by Sam Hargrave, in which a black-market mercenary is hired to rescue the kidnapped son of an imprisoned crime lord.",
+      "releaseDate": "2020-04-24",
+      "genres": ["Action", "Thriller"],
+      "rating": 6.8,
+      "poster": "https://upload.wikimedia.org/wikipedia/en/8/89/Extraction_%282020_film%29.png",
+      "backdrop": "https://upload.wikimedia.org/wikipedia/en/8/89/Extraction_%282020_film%29.png"
+    }
+  ],
+  "users": [],
+  "favourites": [],
+  "subscriptions": [],
+  "payments": [],
+  "watchHistory": [],
+  "adminSettings": []
+}
