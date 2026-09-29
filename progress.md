@@ -54,7 +54,12 @@ Format:
 - Verified in an actual browser (Playwright, headless Chromium): screenshots match the mockup, hero swap on carousel click works, favourite toggle works, zero console errors on Home/Browse/Login/Admin.
 - Follow-up: `.env` needs `VITE_MOVIES_API_URL` set if json-server ever runs on a non-default port (see `.env.example`); real favourites/watch-later persistence still lands in the Favourites phase of the build plan.
 
-## 2026-09-29 — Added MILESTONES.md
+## 2026-09-29 — Added docs/MILESTONES.md
 
-- The two-month build plan only existed as a published web link; added `MILESTONES.md` at the repo root so the plan lives in the project itself, with a link back to the interactive checklist version for daily check-off.
+- The two-month build plan only existed as a published web link; added `docs/MILESTONES.md` so the plan lives in the project itself, with a link back to the interactive checklist version for daily check-off.
 - No code changes.
+
+## 2026-09-29 — Push attempt failed (permissions)
+
+- `git push origin main` was rejected: GitHub returned 403, "Permission to Devdeb2006/nexaplay.git denied to CHIBUZOR-coder." The authenticated account doesn't have write access to this remote.
+- Nothing pushed yet — the commit is local only. Needs the repo owner to add CHIBUZOR-coder as a collaborator, or the remote needs to point at a repo this account can push to (e.g. a personal fork).
