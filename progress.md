@@ -83,3 +83,9 @@ Format:
 - Fixed two lint errors surfaced by this work (`react-refresh/only-export-components` in the context file, `react-hooks/set-state-in-effect` in `useFetch`) — both documented inline with why the flagged pattern is intentional.
 - Verified in an actual browser (Playwright): screenshotted all 15 routes, zero console/page errors; confirmed favouriting on Browse shows up on Favourites (shared context + localStorage working end to end).
 - Still blocked on pushing (see the entry above) — this work is committed locally, not yet on origin/main.
+
+## 2026-09-29 — docs/MILESTONES.md replaced with docs/MILESTONES.pdf
+
+- Converted the build plan to a PDF, as requested, and removed the markdown version — one file, one format, so it's easy to find.
+- The PDF also doubles as an honest progress snapshot: each day is checked off only if functionally complete today, not just UI-built. As of this date: Phase 1 mostly done (TMDB swap still pending), Phase 2/3 mostly done (search/trailer/pagination still open), Phase 4 (auth) essentially not started, Phase 5/6/7 UI built ahead of schedule but Framer Motion modals / real Flutterwave / subscription gating / admin-route enforcement still outstanding, Phase 8/9 not started.
+- This is a point-in-time snapshot, not a live document — re-generate it (or ask me to) as real progress changes, rather than hand-editing the PDF.
