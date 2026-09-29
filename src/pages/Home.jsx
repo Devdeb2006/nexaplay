@@ -7,6 +7,7 @@ import 'swiper/css'
 import 'swiper/css/free-mode'
 
 import useMovies from '../hooks/useMovies'
+import { useFavourites } from '../context/FavouritesContext'
 import Skeleton from '../components/Skeleton'
 import ErrorState from '../components/ErrorState'
 import EmptyState from '../components/EmptyState'
@@ -41,8 +42,8 @@ function HomeSkeleton() {
 
 function Home() {
   const { movies, status, error } = useMovies()
+  const { isFavourite, toggleFavourite } = useFavourites()
   const [selectedId, setSelectedId] = useState(null)
-  const [savedIds, setSavedIds] = useState(() => new Set())
   const [watchLaterIds, setWatchLaterIds] = useState(() => new Set())
 
   const featured = useMemo(() => {
@@ -50,18 +51,14 @@ function Home() {
     return movies.find((movie) => movie.id === selectedId) ?? movies[0]
   }, [movies, selectedId])
 
-  function toggleFromSet(setter) {
-    return (id) => {
-      setter((prev) => {
-        const next = new Set(prev)
-        if (next.has(id)) next.delete(id)
-        else next.add(id)
-        return next
-      })
-    }
+  function toggleWatchLater(id) {
+    setWatchLaterIds((prev) => {
+      const next = new Set(prev)
+      if (next.has(id)) next.delete(id)
+      else next.add(id)
+      return next
+    })
   }
-  const toggleSaved = toggleFromSet(setSavedIds)
-  const toggleWatchLater = toggleFromSet(setWatchLaterIds)
 
   if (status === 'loading') return <HomeSkeleton />
 
@@ -81,7 +78,7 @@ function Home() {
     )
   }
 
-  const isSaved = savedIds.has(featured.id)
+  const isSaved = isFavourite(featured.id)
   const isWatchLater = watchLaterIds.has(featured.id)
 
   return (
@@ -131,7 +128,7 @@ function Home() {
         <div className="relative z-10 flex justify-end gap-3 px-8 pb-6 sm:absolute sm:bottom-6 sm:right-6 sm:px-0 sm:pb-0">
           <button
             type="button"
-            onClick={() => toggleSaved(featured.id)}
+            onClick={() => toggleFavourite(featured.id)}
             aria-pressed={isSaved}
             aria-label="Add to favourites"
             className={`flex h-11 w-11 items-center justify-center rounded-full backdrop-blur transition-colors ${

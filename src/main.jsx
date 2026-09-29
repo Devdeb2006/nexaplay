@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 
+import { FavouritesProvider } from './context/FavouritesContext'
 import RootLayout from './layouts/RootLayout'
 import AdminLayout from './layouts/AdminLayout'
 import ProtectedRoute from './routes/ProtectedRoute'
@@ -69,6 +70,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <FavouritesProvider>
+      <RouterProvider router={router} />
+    </FavouritesProvider>
   </StrictMode>,
 )

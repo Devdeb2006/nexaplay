@@ -63,3 +63,23 @@ Format:
 
 - `git push origin main` was rejected: GitHub returned 403, "Permission to Devdeb2006/nexaplay.git denied to CHIBUZOR-coder." The authenticated account doesn't have write access to this remote.
 - Nothing pushed yet — the commit is local only. Needs the repo owner to add CHIBUZOR-coder as a collaborator, or the remote needs to point at a repo this account can push to (e.g. a personal fork).
+
+## 2026-09-29 — Populated every page with the mock data
+
+- No more one-line placeholder pages. Every route now renders real content sourced from `db.json` (movies) or honest, clearly-labeled placeholder content where a backend doesn't exist yet (auth, payments).
+- Added `src/context/FavouritesContext.jsx`: favourites are now a shared, localStorage-backed store instead of isolated per-page state, so hearting a movie on Home/Browse/Details actually shows up on the Favourites page. Wired into `main.jsx`.
+- Added `src/components/MovieCard.jsx` (poster + title + genres + rating + favourite toggle) and `src/components/FormField.jsx` (labeled input + error text), reused across the new pages.
+- Added `src/hooks/useFetch.js`, a generic loading/success/error fetch hook; `useMovies` is now a thin wrapper over it. Added `src/services/apiClient.js` (shared fetch/error handling) and `src/services/adminData.js` (users/subscriptions/payments).
+- **Browse**: full catalogue grid, title filter (wired to the header search box via `?q=`), genre filter, sort (rating/newest/title), loading/error/empty states.
+- **Movie Details**: real movie by `:id`, poster, synopsis, rating, genres, favourite toggle, subscription prompt, honest "trailer lands here once a licensed source is wired in" placeholder (no fake video embed).
+- **Favourites**: renders the shared favourites store against the catalogue; proper empty state when nothing's saved.
+- **Plans**: three real plan cards (Basic/Standard/Premium) with pricing and features, "Choose plan" hands off to Payment via router state.
+- **Payment / Thank You**: order summary, Flutterwave test-mode CTA (clearly labeled as test mode, no real integration yet), success page reads the plan back from router state.
+- **Profile**: mock user, subscription status, watch-history grid from the catalogue.
+- **Register / Login / Admin Login**: real forms with client-side validation; submission shows an honest "connects once AuthContext lands" message rather than pretending to authenticate.
+- **Admin Dashboard**: live counts — catalogue (real), users/subscriptions/payments (from json-server, currently 0 since nothing's been created yet), favourites (from this device's local store).
+- **Admin Users / Admin Subscriptions & Payments**: real tables reading from json-server, with proper empty states (no users/subscriptions/payments exist yet — expected for a fresh app, not a bug).
+- **Admin Content**: full movie table (poster, genres, rating) with a "Mark featured" toggle (local state for now).
+- Fixed two lint errors surfaced by this work (`react-refresh/only-export-components` in the context file, `react-hooks/set-state-in-effect` in `useFetch`) — both documented inline with why the flagged pattern is intentional.
+- Verified in an actual browser (Playwright): screenshotted all 15 routes, zero console/page errors; confirmed favouriting on Browse shows up on Favourites (shared context + localStorage working end to end).
+- Still blocked on pushing (see the entry above) — this work is committed locally, not yet on origin/main.
